@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #e7b3b3;
+}
+
+#startScreen, #gameOver {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+canvas {
+  display: none;
+  background-color: rgb(252, 249, 249); /* sky blue */
+  border: 2px solid #0f0f0f;
+  margin-top: 20px;
+}
+
+#scoreBoard {
+  margin-top: 10px;
+  font-size: 18px;
+}
