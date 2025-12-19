@@ -101,6 +101,8 @@ function updateGame() {
       if (missed >= 3) endGame();
     }
   }
+    ctx.drawImage(basketImg, basket.x, basket.y, basket.width, basket.height);
+
 }
 
 // End Game
@@ -110,6 +112,7 @@ function endGame() {
   gameOverScreen.style.display = "block";
   finalScore.textContent = "Your Score: " + score;
 }
+
 
 
 
