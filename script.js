@@ -1,5 +1,10 @@
 let direction = 0;
 
+// Draw basket
+  const basketImg = new Image();
+  basketImg.src = "images/basket.png";
+
+
 const objectImage = new Image();
 objectImage.src = "images/apple.png"; // path to your image
 const canvas = document.getElementById("gameCanvas");
@@ -12,7 +17,11 @@ const finalScore = document.getElementById("finalScore");
 const scoreSpan = document.getElementById("score");
 const missSpan = document.getElementById("miss");
 
-let basket = { x: 250, y: 350, width: 100, height: 40 };
+let basket = { 
+  x: 250,
+  y: canvas.height-60,
+  width: 100,
+  height: 40 };
 let basketSpeed = 10;
 
 let objects = [];
@@ -67,12 +76,6 @@ function spawnObject() {
 function updateGame() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Draw basket
-  const basketImg = new Image();
-  basketImg.src = "images/basket.png";
-  ctx.fillStyle = "purple";
-  ctx.drawImage(basketImg, basket.x, basket.y, basket.width, basket.height);
-
   // Draw objects
   ctx.fillStyle = "purple";
   for (let i = 0; i < objects.length; i++) {
@@ -107,6 +110,7 @@ function endGame() {
   gameOverScreen.style.display = "block";
   finalScore.textContent = "Your Score: " + score;
 }
+
 
 
 
