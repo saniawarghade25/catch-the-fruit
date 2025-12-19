@@ -1,3 +1,5 @@
+let direction = 0;
+
 const objectImage = new Image();
 objectImage.src = "assets/apple.png"; // path to your image
 const canvas = document.getElementById("gameCanvas");
