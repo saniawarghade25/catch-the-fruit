@@ -1,7 +1,7 @@
 let direction = 0;
 
 const objectImage = new Image();
-objectImage.src = "images/apple.png"; // path to your image
+objectImage.src = "catch-the-fruit/apple.png"; // path to your image
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
@@ -69,7 +69,7 @@ function updateGame() {
 
   // Draw basket
   const basketImg = new Image();
-  basketImg.src = "images/basket.png";
+  basketImg.src = "catch-the-fruit/basket.png";
   ctx.fillStyle = "purple";
   ctx.drawImage(basketImg, basket.x, basket.y, basket.width, basket.height);
 
@@ -107,4 +107,5 @@ function endGame() {
   gameOverScreen.style.display = "block";
   finalScore.textContent = "Your Score: " + score;
 }
+
 
